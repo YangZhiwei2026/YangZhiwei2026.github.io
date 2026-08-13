@@ -4,9 +4,9 @@
 
 - **姓名：** 杨志伟
 - **性别：** 男
-- **出生日期：** 2004年04月21日
+- **出生日期：** 2009年04月21日
 - **所在学校：** 西安外事学院
-- **入学年份：** 2022级
+- **入学年份：** 2025级
 
 ## 关于我
 
@@ -35,8 +35,8 @@
 ## 联系方式
 
 - **电子邮件：** your@email.com
-- **GitHub：** [GitHub Profile](https://github.com/eos-evm)
+- **GitHub：** [GitHub Profile](https://github.com/YangZhiwei2026)
 - **LinkedIn：** [LinkedIn Profile](https://www.linkedin.com/in/yourprofile)
 
 请随时与我联系，我期待与各位一同学习和合作！
-# eos-evm.github.io
+# YangZhiwei2026.github.io
