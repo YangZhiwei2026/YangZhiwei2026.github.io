@@ -3,1328 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>杨志伟 | Yang Zhiwei</title>
-
-    <meta name="description"
-          content="杨志伟的个人主页 | Yang Zhiwei's Personal Website">
-    <meta name="author" content="Yang Zhiwei">
-
+    <title>杨志伟 - 个人主页</title>
     <style>
+        /* 基础重置与全局样式 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                "Microsoft YaHei",
-                "PingFang SC",
-                Arial,
-                sans-serif;
-            line-height: 1.8;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f9fbfd;
             color: #1f2937;
-            background: #f5f7fb;
+            line-height: 1.7;
+            padding: 40px 20px;
         }
-
-        a {
-            color: inherit;
-            text-decoration: none;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
-
-        /* ===== 导航栏 ===== */
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 64px;
-            z-index: 1000;
-
-            background: rgba(255, 255, 255, 0.88);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-
-            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            height: 100%;
-            margin: auto;
-
+        /* 头像与头部 */
+        .header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-
-            padding: 0 24px;
+            gap: 30px;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #f0f4f8;
         }
-
-        .logo {
-            font-size: 20px;
-            font-weight: 700;
-            color: #111827;
-        }
-
-        .logo span {
-            color: #2563eb;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-size: 14px;
-            color: #4b5563;
-            transition: 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #2563eb;
-        }
-
-        /* ===== Hero ===== */
-
-        .hero {
-            min-height: 100vh;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            padding: 100px 24px 60px;
-
-            background:
-                radial-gradient(
-                    circle at 20% 20%,
-                    rgba(59, 130, 246, 0.12),
-                    transparent 35%
-                ),
-                radial-gradient(
-                    circle at 80% 70%,
-                    rgba(99, 102, 241, 0.10),
-                    transparent 35%
-                ),
-                #f8fafc;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            text-align: center;
-        }
-
         .avatar {
             width: 120px;
             height: 120px;
-
-            margin: 0 auto 25px;
-
             border-radius: 50%;
-
+            background: linear-gradient(135deg, #ff7e5f, #feb47b); /* 占位渐变色 */
             display: flex;
             align-items: center;
             justify-content: center;
-
-            background: linear-gradient(
-                135deg,
-                #2563eb,
-                #6366f1
-            );
-
-            color: white;
-            font-size: 38px;
-            font-weight: 700;
-
-            box-shadow:
-                0 15px 40px rgba(37, 99, 235, 0.25);
+            color: #fff;
+            font-size: 48px;
+            flex-shrink: 0;
         }
-
-        .hero h1 {
-            font-size: clamp(38px, 7vw, 68px);
-            line-height: 1.15;
-            color: #111827;
-            margin-bottom: 10px;
-        }
-
-        .hero h1 span {
-            color: #2563eb;
-        }
-
-        .hero-subtitle {
-            font-size: 20px;
-            color: #6b7280;
+        .header-info h1 {
+            font-size: 28px;
             margin-bottom: 8px;
-        }
-
-        .hero-subtitle-en {
-            font-size: 16px;
-            color: #9ca3af;
-            margin-bottom: 30px;
-        }
-
-        .hero-description {
-            max-width: 720px;
-            margin: auto;
-
-            color: #4b5563;
-            font-size: 16px;
-        }
-
-        .hero-buttons {
-            margin-top: 30px;
-
-            display: flex;
-            justify-content: center;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-
-            padding: 11px 24px;
-
-            border-radius: 10px;
-
-            font-size: 14px;
-            font-weight: 600;
-
-            transition: 0.2s;
-        }
-
-        .btn-primary {
-            color: white;
-            background: #2563eb;
-            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
-        }
-
-        .btn-primary:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #374151;
-            border: 1px solid #e5e7eb;
-        }
-
-        .btn-secondary:hover {
-            border-color: #2563eb;
-            color: #2563eb;
-        }
-
-        /* ===== 通用 Section ===== */
-
-        section {
-            padding: 90px 24px;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 32px;
             color: #111827;
-            margin-bottom: 5px;
         }
-
-        .section-title p {
-            color: #9ca3af;
-            font-size: 14px;
-        }
-
-        /* ===== 关于我 ===== */
-
-        .about {
-            background: white;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .profile-card {
-            background: #f8fafc;
-            border: 1px solid #e5e7eb;
-
-            padding: 30px;
-
-            border-radius: 18px;
-        }
-
-        .profile-item {
-            padding: 10px 0;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .profile-item:last-child {
-            border-bottom: none;
-        }
-
-        .profile-label {
-            font-size: 13px;
-            color: #9ca3af;
-        }
-
-        .profile-value {
-            font-size: 16px;
-            font-weight: 600;
-            color: #374151;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
+        .header-info p {
             color: #4b5563;
+            font-size: 16px;
         }
-
-        .english {
-            color: #6b7280;
-            font-size: 14px;
+        .header-info .highlight {
+            color: #e11d48;
+            font-weight: 600;
         }
-
-        /* ===== 卡片 ===== */
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .card {
-            background: white;
-
-            padding: 30px;
-
-            border-radius: 18px;
-
-            border: 1px solid #e5e7eb;
-
-            transition: 0.25s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-
-            box-shadow:
-                0 15px 35px rgba(0, 0, 0, 0.07);
-        }
-
-        .card-icon {
-            width: 48px;
-            height: 48px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 12px;
-
-            background: #eff6ff;
-            color: #2563eb;
-
+        /* 区块标题 */
+        h2 {
             font-size: 22px;
-
-            margin-bottom: 18px;
+            margin: 30px 0 15px 0;
+            color: #1f2937;
+            border-left: 5px solid #e11d48;
+            padding-left: 12px;
         }
-
-        .card h3 {
-            font-size: 20px;
-            color: #111827;
-            margin-bottom: 5px;
-        }
-
-        .card h4 {
-            font-size: 13px;
-            font-weight: 400;
-            color: #9ca3af;
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            color: #6b7280;
-            font-size: 14px;
-        }
-
-        /* ===== 技能 ===== */
-
-        .skills {
-            background: #f8fafc;
-        }
-
-        .skill-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .skill {
-            background: white;
-            padding: 24px;
-
-            border-radius: 15px;
-
-            border: 1px solid #e5e7eb;
-        }
-
-        .skill-title {
-            display: flex;
-            justify-content: space-between;
-
-            margin-bottom: 10px;
-
-            font-weight: 600;
-            color: #374151;
-        }
-
-        .skill-en {
-            font-size: 12px;
-            color: #9ca3af;
-        }
-
-        .progress {
-            height: 7px;
-            background: #e5e7eb;
-            border-radius: 20px;
-            overflow: hidden;
-        }
-
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                #2563eb,
-                #6366f1
-            );
-            border-radius: 20px;
-        }
-
-        /* ===== 兴趣 ===== */
-
-        .interest-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .interest {
-            min-height: 220px;
-
-            padding: 35px;
-
-            border-radius: 18px;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-
-            color: white;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #1e3a8a,
-                    #2563eb
-                );
-
-            box-shadow:
-                0 12px 30px rgba(37, 99, 235, 0.15);
-        }
-
-        .interest:nth-child(2) {
-            background:
-                linear-gradient(
-                    135deg,
-                    #312e81,
-                    #4f46e5
-                );
-        }
-
-        .interest-icon {
-            font-size: 35px;
+        /* 正文排版 */
+        p {
             margin-bottom: 12px;
         }
-
-        .interest h3 {
-            font-size: 22px;
-            margin-bottom: 4px;
+        ul {
+            list-style: none;
+            padding-left: 0;
         }
-
-        .interest p {
-            opacity: 0.85;
-            font-size: 14px;
+        ul li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
         }
-
-        /* ===== 目标 ===== */
-
-        .vision {
-            background: white;
+        ul li::before {
+            content: "✦";
+            color: #e11d48;
+            position: absolute;
+            left: 0;
+            top: 6px;
         }
-
-        .vision-box {
-            max-width: 800px;
-            margin: auto;
-
-            padding: 45px;
-
-            text-align: center;
-
-            border-radius: 20px;
-
-            background: #f8fafc;
-
-            border: 1px solid #e5e7eb;
-        }
-
-        .vision-box p {
-            color: #4b5563;
-            margin-bottom: 20px;
-        }
-
-        .vision-box p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* ===== 联系方式 ===== */
-
-        .contact {
-            background: #111827;
-            color: white;
-        }
-
-        .contact .section-title h2 {
-            color: white;
-        }
-
-        .contact .section-title p {
-            color: #9ca3af;
-        }
-
-        .contact-grid {
+        .skills-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
         }
-
-        .contact-item {
+        .skills-grid li {
+            background: #f3f4f6;
+            padding: 8px 12px 8px 32px;
+            border-radius: 8px;
+        }
+        .skills-grid li::before {
+            top: 8px;
+        }
+        /* 联系方式 */
+        .contact {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f4f8;
             text-align: center;
-
-            padding: 25px;
-
-            border-radius: 15px;
-
-            background: rgba(255, 255, 255, 0.05);
-
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .contact-icon {
-            font-size: 25px;
-            margin-bottom: 10px;
-        }
-
-        .contact-item h3 {
-            font-size: 15px;
-            margin-bottom: 5px;
-        }
-
-        .contact-item p,
-        .contact-item a {
-            font-size: 13px;
-            color: #9ca3af;
-        }
-
-        .contact-item a:hover {
-            color: white;
-        }
-
-        /* ===== Footer ===== */
-
-        footer {
-            padding: 25px;
-
-            text-align: center;
-
-            background: #0b1120;
-
             color: #6b7280;
-
-            font-size: 13px;
         }
-
-        /* ===== Responsive ===== */
-
-        @media (max-width: 768px) {
-
-            .nav-links {
-                display: none;
+        .contact a {
+            color: #e11d48;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
             }
-
-            .about-grid {
+            .header-info h1 {
+                font-size: 24px;
+            }
+            .skills-grid {
                 grid-template-columns: 1fr;
             }
-
-            .cards,
-            .skill-list,
-            .interest-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 70px 20px;
-            }
-
-            .hero {
-                padding-top: 90px;
-            }
-
-            .hero h1 {
-                font-size: 44px;
-            }
-
-            .vision-box {
-                padding: 30px 20px;
+            .container {
+                padding: 24px;
             }
         }
     </style>
 </head>
-
 <body>
+    <div class="container">
+        <!-- 个人信息头部 -->
+        <div class="header">
+            <div class="avatar">👤</div> <!-- 您可以替换为自己真实的照片URL或 <img src="..."> -->
+            <div class="header-info">
+                <h1>杨志伟</h1>
+                <p><strong>年龄：</strong> 14岁 &nbsp;|&nbsp; <strong>性别：</strong> 男</p>
+                <p><strong>学校：</strong> <span class="highlight">西安市曲江第三中学</span>（初二年级）</p>
+                <p><strong>出生日期：</strong> 2009年04月21日</p>
+            </div>
+        </div>
 
-<!-- ================= 导航栏 / Navigation ================= -->
+        <!-- 关于我 -->
+        <h2>关于我</h2>
+        <p>我是一名阳光开朗的14岁初二男生。我对世界充满好奇，喜欢阅读课外书籍，也热衷于探索课本之外的广阔天地。在学校里，我尊敬师长、乐于助人，喜欢和同学们一起讨论学习中的难题，在轻松愉快的氛围中共同进步。</p>
 
-<nav>
-    <div class="nav-container">
+        <!-- 校园与学业表现 -->
+        <h2>校园与学业表现</h2>
+        <p>在初二这个承前启后的关键阶段，我保持踏实认真的学习态度，尤其对英语、语文和历史有着浓厚的兴趣。我积极参加学校的各项文体活动，曾在校内的征文比赛和英语演讲活动中获得过不错的成绩。同时我也担任班干部，协助老师处理班级事务，极大地锻炼了我的责任心和沟通能力。</p>
 
-        <a href="#home" class="logo">
-            Yang<span>Zhiwei</span>
-        </a>
-
-        <ul class="nav-links">
-            <li><a href="#home">首页 / Home</a></li>
-            <li><a href="#about">关于我 / About</a></li>
-            <li><a href="#academic">学术 / Academic</a></li>
-            <li><a href="#skills">技能 / Skills</a></li>
-            <li><a href="#interests">兴趣 / Interests</a></li>
-            <li><a href="#contact">联系 / Contact</a></li>
+        <!-- 个人技能 -->
+        <h2>个人技能</h2>
+        <ul class="skills-grid">
+            <li><strong>语言能力：</strong> 具备良好的英语基础，可进行日常交流与阅读</li>
+            <li><strong>数字化能力：</strong> 熟练使用电脑进行资料查阅、文档编辑与信息整理</li>
+            <li><strong>团队协作：</strong> 具有良好的合作意识，善于在集体中发挥积极作用</li>
         </ul>
 
+        <!-- 兴趣爱好 -->
+        <h2>兴趣爱好</h2>
+        <ul>
+            <li><strong>📸 摄影：</strong> 我热衷于用镜头记录生活。无论是曲江校园里的四季更迭，还是西安古城墙的壮丽风景，都是我镜头下的好素材。</li>
+            <li><strong>🎸 音乐与运动：</strong> 课余时间我喜欢弹吉他来放松心情，同时我也是个体育爱好者，经常和同学一起打篮球或跑步，运动让我感到精力充沛。</li>
+        </ul>
+
+        <!-- 目标与愿景 -->
+        <h2>目标与愿景</h2>
+        <p>我的短期目标是在初二这年把各科基础打牢，为初三中考做好充分准备。长远来看，我希望能够考入一所理想的高中，继续开阔眼界，成长为一名有独立思考能力和担当的新时代青年。</p>
+
+        <!-- 联系方式 -->
+        <div class="contact">
+            <p>📧 邮箱： <a href="mailto:your@email.com">your@email.com</a></p>
+            <p>🌐 主页： <a href="https://YangZhiwei2026.github.io" target="_blank">YangZhiwei2026.github.io</a></p>
+            <p style="margin-top: 15px; font-size: 14px;">期待在未来的学习生活中，与大家一同成长！</p>
+        </div>
     </div>
-</nav>
-
-
-<!-- ================= 首页 / Hero ================= -->
-
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <div class="avatar">
-            YZ
-        </div>
-
-        <h1>
-            杨志伟
-            <span>Yang Zhiwei</span>
-        </h1>
-
-        <div class="hero-subtitle">
-            国际关系专业学生
-        </div>
-
-        <div class="hero-subtitle-en">
-            International Relations Student
-        </div>
-
-        <p class="hero-description">
-            对国际事务、跨文化交流与全球性问题充满热情，
-            致力于探索国际合作、冲突解决与全球治理。
-        </p>
-
-        <p class="hero-description english">
-            Passionate about international affairs, cross-cultural
-            communication and global issues, with a strong interest
-            in international cooperation, conflict resolution and
-            global governance.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#about" class="btn btn-primary">
-                了解更多 · Learn More
-            </a>
-
-            <a href="#contact" class="btn btn-secondary">
-                联系我 · Contact Me
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= 关于我 / About ================= -->
-
-<section class="about" id="about">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>关于我</h2>
-
-            <p>About Me</p>
-
-        </div>
-
-        <div class="about-grid">
-
-            <div class="profile-card">
-
-                <div class="profile-item">
-                    <div class="profile-label">
-                        姓名 / Name
-                    </div>
-
-                    <div class="profile-value">
-                        杨志伟 / Yang Zhiwei
-                    </div>
-                </div>
-
-                <div class="profile-item">
-                    <div class="profile-label">
-                        性别 / Gender
-                    </div>
-
-                    <div class="profile-value">
-                        男 / Male
-                    </div>
-                </div>
-
-                <div class="profile-item">
-                    <div class="profile-label">
-                        出生日期 / Date of Birth
-                    </div>
-
-                    <div class="profile-value">
-                        2009年04月21日
-                    </div>
-                </div>
-
-                <div class="profile-item">
-                    <div class="profile-label">
-                        学校 / University
-                    </div>
-
-                    <div class="profile-value">
-                        西安外事学院
-                    </div>
-                </div>
-
-                <div class="profile-item">
-                    <div class="profile-label">
-                        入学年份 / Enrollment
-                    </div>
-
-                    <div class="profile-value">
-                        2025级 / Class of 2025
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="about-text">
-
-                <p>
-                    我是一名对国际事务和跨文化交流充满热情的学生。
-                    在学习国际关系专业期间，我逐渐形成了对国际政治、
-                    外交事务和国际经济的浓厚兴趣。
-                </p>
-
-                <p class="english">
-                    I am a student passionate about international affairs
-                    and cross-cultural communication. During my studies
-                    in International Relations, I have developed a strong
-                    interest in international politics, diplomacy and
-                    international economics.
-                </p>
-
-                <p>
-                    我热爱研究不同文化之间的联系与冲突，
-                    并关注全球性问题以及国际社会可能的解决方案。
-                </p>
-
-                <p class="english">
-                    I enjoy exploring the connections and conflicts
-                    between different cultures, while also examining
-                    global challenges and possible solutions within
-                    the international community.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= 学术成就 / Academic ================= -->
-
-<section id="academic">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>学术成就</h2>
-
-            <p>Academic Achievements</p>
-
-        </div>
-
-
-        <div class="cards">
-
-            <div class="card">
-
-                <div class="card-icon">
-                    🎓
-                </div>
-
-                <h3>
-                    学术奖学金
-                </h3>
-
-                <h4>
-                    Academic Scholarships
-                </h4>
-
-                <p>
-                    在学习期间积极参与学术活动，并多次获得学院
-                    学术奖学金。
-                </p>
-
-                <p class="english">
-                    Actively involved in academic activities and
-                    awarded academic scholarships on multiple occasions.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    🌐
-                </div>
-
-                <h3>
-                    研究方向
-                </h3>
-
-                <h4>
-                    Research Interests
-                </h4>
-
-                <p>
-                    主要关注国际冲突解决、国际法以及全球化
-                    对国际社会产生的影响。
-                </p>
-
-                <p class="english">
-                    My research interests focus on international
-                    conflict resolution, international law and
-                    the impact of globalization.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    🔬
-                </div>
-
-                <h3>
-                    学术研究
-                </h3>
-
-                <h4>
-                    Academic Research
-                </h4>
-
-                <p>
-                    曾参与学术研究项目，并在团队中承担研究和
-                    组织协调工作。
-                </p>
-
-                <p class="english">
-                    Participated in academic research projects,
-                    taking responsibilities in research,
-                    organization and coordination.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    📚
-                </div>
-
-                <h3>
-                    国际事务
-                </h3>
-
-                <h4>
-                    International Affairs
-                </h4>
-
-                <p>
-                    持续关注国际政治、外交关系、全球治理以及
-                    国际经济等领域。
-                </p>
-
-                <p class="english">
-                    Continuously following developments in
-                    international politics, diplomacy, global
-                    governance and international economics.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= 技能 / Skills ================= -->
-
-<section class="skills" id="skills">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>专业技能</h2>
-
-            <p>Skills & Competencies</p>
-
-        </div>
-
-
-        <div class="skill-list">
-
-            <div class="skill">
-
-                <div class="skill-title">
-
-                    <span>
-                        英语能力
-                    </span>
-
-                    <span class="skill-en">
-                        English
-                    </span>
-
-                </div>
-
-                <div class="progress">
-                    <div
-                        class="progress-bar"
-                        style="width: 88%;">
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-title">
-
-                    <span>
-                        法语
-                    </span>
-
-                    <span class="skill-en">
-                        French
-                    </span>
-
-                </div>
-
-                <div class="progress">
-                    <div
-                        class="progress-bar"
-                        style="width: 45%;">
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-title">
-
-                    <span>
-                        西班牙语
-                    </span>
-
-                    <span class="skill-en">
-                        Spanish
-                    </span>
-
-                </div>
-
-                <div class="progress">
-                    <div
-                        class="progress-bar"
-                        style="width: 40%;">
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-title">
-
-                    <span>
-                        研究与分析
-                    </span>
-
-                    <span class="skill-en">
-                        Research & Analysis
-                    </span>
-
-                </div>
-
-                <div class="progress">
-                    <div
-                        class="progress-bar"
-                        style="width: 85%;">
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-title">
-
-                    <span>
-                        团队合作
-                    </span>
-
-                    <span class="skill-en">
-                        Teamwork
-                    </span>
-
-                </div>
-
-                <div class="progress">
-                    <div
-                        class="progress-bar"
-                        style="width: 90%;">
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-title">
-
-                    <span>
-                        领导能力
-                    </span>
-
-                    <span class="skill-en">
-                        Leadership
-                    </span>
-
-                </div>
-
-                <div class="progress">
-                    <div
-                        class="progress-bar"
-                        style="width: 82%;">
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= 兴趣爱好 / Interests ================= -->
-
-<section id="interests">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>兴趣爱好</h2>
-
-            <p>Interests & Hobbies</p>
-
-        </div>
-
-
-        <div class="interest-grid">
-
-            <div class="interest">
-
-                <div class="interest-icon">
-                    📷
-                </div>
-
-                <h3>
-                    摄影
-                </h3>
-
-                <p>
-                    自由摄影师 · Photography
-                </p>
-
-                <p>
-                    喜欢记录自然风光与城市景观，
-                    用影像探索世界。
-                </p>
-
-            </div>
-
-
-            <div class="interest">
-
-                <div class="interest-icon">
-                    🎸
-                </div>
-
-                <h3>
-                    音乐
-                </h3>
-
-                <p>
-                    吉他 · Guitar
-                </p>
-
-                <p>
-                    喜欢演奏不同风格的音乐，
-                    在音乐中寻找灵感。
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= 目标与愿景 / Vision ================= -->
-
-<section class="vision">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>目标与愿景</h2>
-
-            <p>Goals & Vision</p>
-
-        </div>
-
-
-        <div class="vision-box">
-
-            <p>
-                我的长期目标是在国际组织、外交部门或国际 NGO
-                中工作，为促进国际合作、和平与理解贡献自己的力量。
-            </p>
-
-            <p class="english">
-                My long-term goal is to work in an international
-                organization, diplomatic institution or international
-                NGO, contributing to international cooperation,
-                peace and mutual understanding.
-            </p>
-
-            <p>
-                我相信，通过持续学习、不懈努力和深入研究，
-                我能够逐步实现自己的职业目标。
-            </p>
-
-            <p class="english">
-                I believe that through continuous learning,
-                persistent effort and meaningful research,
-                I can gradually achieve my professional goals.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= 联系方式 / Contact ================= -->
-
-<section class="contact" id="contact">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>联系方式</h2>
-
-            <p>Get In Touch</p>
-
-        </div>
-
-
-        <div class="contact-grid">
-
-            <div class="contact-item">
-
-                <div class="contact-icon">
-                    ✉️
-                </div>
-
-                <h3>
-                    Email
-                </h3>
-
-                <a href="mailto:your@email.com">
-                    your@email.com
-                </a>
-
-            </div>
-
-
-            <div class="contact-item">
-
-                <div class="contact-icon">
-                    💻
-                </div>
-
-                <h3>
-                    GitHub
-                </h3>
-
-                <a href="https://github.com/YangZhiwei2026"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    GitHub Profile
-                </a>
-
-            </div>
-
-
-            <div class="contact-item">
-
-                <div class="contact-icon">
-                    💼
-                </div>
-
-                <h3>
-                    LinkedIn
-                </h3>
-
-                <a href="#"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    LinkedIn Profile
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div style="
-            text-align:center;
-            margin-top:40px;
-            color:#9ca3af;
-            font-size:14px;
-        ">
-
-            <p>
-                请随时与我联系，我期待与各位一同学习和合作！
-            </p>
-
-            <p>
-                Feel free to contact me. I look forward to
-                learning and collaborating with you!
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= Footer ================= -->
-
-<footer>
-
-    <p>
-        © 2026 Yang Zhiwei · YangZhiwei2026.github.io
-    </p>
-
-    <p>
-        国际关系 · International Relations
-    </p>
-
-</footer>
-
-
 </body>
 </html>
