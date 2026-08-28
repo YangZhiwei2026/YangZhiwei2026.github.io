@@ -1,32 +1,34 @@
-# 杨志伟的个人简介
+# Yang Zhiwei – Personal Profile
 
-## 基本信息
-- **姓名**：杨志伟
-- **性别**：男
-- **出生日期**：2012年04月21日
-- **就读学校**：西安市曲江第三中学
-- **就读年级**：初二年级（八年级）
+## Basic Information
+- **Name**: Yang Zhiwei
+- **Gender**: Male
+- **Date of Birth**: April 21, 2012
+- **School**: Xi'an Qujiang No. 2 Middle School
+- **Grade**: Grade 8
 
-## 关于我
-我是一名阳光开朗的14岁初二男生，就读于西安市曲江第三中学。我对世界充满好奇，喜欢阅读课外书籍，也热衷于探索课本之外的广阔天地。在学校里，我尊敬师长、乐于助人，喜欢和同学们一起讨论学习中的难题，在轻松愉快的氛围中共同进步。
+## About Me
+I am a cheerful and outgoing 14-year-old boy in Grade 8. I attend Xi'an Qujiang No. 2 Middle School, located at No. 999, Gongtian 2nd Road, Qujiang New District, Xi'an, Shaanxi, China. I am curious about the world and enjoy reading books beyond the classroom, as well as exploring knowledge outside of textbooks. At school, I respect my teachers, enjoy helping my classmates, and love discussing challenging problems with them in a relaxed and enjoyable atmosphere where we can all grow together.
 
-## 校园与学业表现
-在初二这个承前启后的关键阶段，我保持踏实认真的学习态度，尤其对英语、语文和历史有着浓厚的兴趣。我积极参加学校的各项文体活动，曾在校内的征文比赛和英语演讲活动中获得过不错的成绩。我担任班干部（或课代表），经常协助老师处理班级事务，这极大地锻炼了我的责任心和沟通能力。
+## Academic Performance
+As a Grade 8 student in this pivotal transition period, I maintain a diligent and serious approach to my studies, with a particular interest in English, Chinese, and History. I actively participate in various school activities and have achieved good results in school essay competitions and English speaking events. I serve as a class cadre (or subject representative), often assisting teachers with class affairs, which has greatly developed my sense of responsibility and communication skills.
 
-## 个人技能
-- **语言能力**：具备较好的英语基础，能够进行日常口语交流和基础阅读。
-- **办公与信息**：能够熟练使用电脑进行资料查阅和文档编辑。
-- **团队协作**：乐于参与集体活动，具有良好的团队合作意识和沟通能力。
+## Personal Skills
+- **Language Skills**: Strong foundation in English for daily conversation and basic reading.
+- **Computer & Information Literacy**: Proficient in using computers for research and document editing.
+- **Teamwork**: Enjoy participating in group activities with a strong collaborative mindset and good communication skills.
 
-## 兴趣爱好
-- **摄影**：我热衷于用镜头记录生活。无论是曲江校园里的四季更迭，还是西安古城墙的壮丽风景，都是我镜头下的好素材。
-- **音乐与运动**：课余时间，我喜欢弹吉他来放松心情。同时我也是个体育爱好者，经常和同学一起打篮球或跑步，运动让我感到精力充沛。
+## Hobbies & Interests
+- **Photography**: I love capturing life through the lens. Whether it's the changing seasons on the Qujiang campus or the magnificent views of Xi'an's ancient city wall, they all make great subjects for my photography.
+- **Music & Sports**: In my free time, I enjoy playing the guitar to relax. I'm also a sports enthusiast — I often play basketball or go running with my classmates. Sports keep me energetic and refreshed.
 
-## 目标与愿景
-我的短期目标是在初二这一年把各科基础打牢，为即将到来的初三中考做好充分准备。长远来看，我希望能够考入一所理想的高中，继续开阔眼界，成长为一名对社会有担当、有独立思考能力的新时代青年。
+## Goals & Aspirations
+My short-term goal is to build a solid foundation in all subjects during Grade 8, preparing thoroughly for the high school entrance exam in Grade 9. In the long run, I hope to be admitted to an ideal high school, continue broadening my horizons, and grow into a responsible young person with independent thinking skills who can contribute positively to society.
 
-## 联系方式
-- **电子邮箱**：your@email.com
-- **个人主页**：[YangZhiwei2026.github.io](https://YangZhiwei2026.github.io)
+## Contact
+- **Email**: your@email.com
+- **Website**: [YangZhiwei2026.github.io](https://YangZhiwei2026.github.io)
 
-期待在未来的学习生活中，能与大家一同成长！
+---
+
+*Looking forward to growing together with everyone in the years ahead!*
